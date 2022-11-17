@@ -1,0 +1,121 @@
+.custom-container {
+	max-width: 1700px;
+	margin: 0 auto;
+}
+@for $i from 0 to 25 {
+    .mt-#{5 * $i}{
+        margin-top: 5px * $i;
+    }
+    .mb-#{5 * $i}{
+        margin-bottom: 5px * $i;
+    }
+    .ml-#{5 * $i}{
+        margin-left: 5px * $i;
+    }
+    .mr-#{5 * $i}{
+        margin-right: 5px * $i;
+    }
+    .pt-#{5 * $i}{
+        padding-top: 5px * $i;
+    }
+    .pb-#{5 * $i}{
+        padding-bottom: 5px * $i;
+    }
+    .pl-#{5 * $i}{
+        padding-left: 5px * $i;
+    }
+    .pr-#{5 * $i}{
+        padding-right: 5px * $i;
+    }
+}
+@media (max-width: 1199px) {
+    @for $i from 0 to 20 {
+        .xl-mb-#{5 * $i}{
+            margin-bottom: 5px * $i;
+        }
+        .xl-ml-#{5 * $i}{
+            margin-left: 5px * $i;
+        }
+        .xl-mr-#{5 * $i}{
+            margin-right: 5px * $i;
+        }
+    }
+}
+@media (max-width: 991px) {
+    @for $i from 0 to 15 {
+        .lg-mb-#{5 * $i}{
+            margin-bottom: 5px * $i;
+        }
+        .lg-mt-#{5 * $i}{
+            margin-top: 5px * $i;
+        }
+        .lg-ml-#{5 * $i}{
+            margin-left: 5px * $i;
+        }
+        .lg-pt-#{5 * $i}{
+            padding-top: 5px * $i;
+        }
+        .lg-pb-#{5 * $i}{
+            padding-bottom: 5px * $i;
+        }
+        .lg-pl-#{5 * $i}{
+            padding-left: 5px * $i;
+        }
+        .lg-pr-#{5 * $i}{
+            padding-right: 5px * $i;
+        }
+    }
+    $list: left, center, right;
+@each $i in $list {
+    .lg-t-#{$i} {
+        text-align: $i;
+    }
+}
+}
+@media (max-width: 767px) {
+    @for $i from 0 to 10 {
+        .md-mb-#{5 * $i}{
+            margin-bottom: 5px * $i;
+        }
+        .md-pt-#{5 * $i}{
+            padding-top: 5px * $i;
+        }
+        .md-pb-#{5 * $i}{
+            padding-bottom: 5px * $i;
+        }
+        .md-pl-#{5 * $i}{
+            padding-left: 5px * $i;
+        }
+        .md-pr-#{5 * $i}{
+            padding-right: 5px * $i;
+        }
+    }
+    $list: left, center, right;
+    @each $i in $list {
+        .md-t-#{$i} {
+            text-align: $i;
+        }
+    }
+}
+@media (max-width: 575px) {
+    @for $i from 0 to 10 {
+        .sm-mb-#{5 * $i}{
+            margin-bottom: 5px * $i;
+        }
+        .sm-mt-#{5 * $i}{
+            margin-top: 5px * $i;
+        }
+        .sm-pt-#{5 * $i}{
+            padding-top: 5px * $i;
+        }
+        .sm-pb-#{5 * $i}{
+            padding-bottom: 5px * $i;
+        }
+        .sm-pl-#{5 * $i}{
+            padding-left: 5px * $i;
+        }
+        .sm-pr-#{5 * $i}{
+            padding-right: 5px * $i;
+        }
+    }
+}

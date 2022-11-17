@@ -1,0 +1,78 @@
+/*==========================================================================
+About Page
+==========================================================================*/
+.about__page {
+    background: $text-color-8;
+    &-title {
+        max-width: 600px;
+    }
+    &-area {
+        position: relative;
+        &-experience {
+            display: inline-block;
+            background: $text-color-1;
+            padding: 70px 55px;
+            position: absolute;
+            top: -210px;
+            right: 70px;
+            width: 350px;
+            h3 {
+                font-size: 120px;
+                line-height: 140px;
+                margin-bottom: 10px;
+            }
+            p {
+                color: $white;
+                font-size: 23px;
+                line-height: 33px;
+                font-family: $heading-font;
+            }
+        }
+        &-item {
+            p {
+                max-width: 170px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .about__page {
+        &-area {
+            &-experience {
+                padding: 60px 50px;
+                right: 30px;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .about__page {
+        &-title {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        &-area {
+            &-experience {
+                position: initial;
+                margin-bottom: 30px;
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .about__page {
+        &-area {
+            &-item {
+                text-align: center;
+                p {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

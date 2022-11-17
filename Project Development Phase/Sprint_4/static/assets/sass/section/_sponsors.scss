@@ -1,0 +1,25 @@
+/*==========================================================================
+Sponsors
+==========================================================================*/
+.sponsors__area {
+    background: $text-color-8;
+    padding: 56px 0;
+}
+/*==========================================================================
+Clients
+==========================================================================*/
+.client__area {
+    background: $text-color-8;
+    padding-bottom: 150px;
+    &-title {
+        max-width: 620px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    &-item {
+        border: 1px solid $border3;
+        padding: 50px;
+        text-align: center;
+        height: 150px;
+    }
+}

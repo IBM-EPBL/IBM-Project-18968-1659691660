@@ -1,0 +1,31 @@
+/*==========================================================================
+Video
+==========================================================================*/
+.video__area {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    text-align: center;
+    padding: 200px 0;   
+    &-play-icon {
+        position: relative;
+        background: $white;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 50%;  
+        a {
+            color: $text-color-1;
+            font-size: 25px;  
+            display: block;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+
+        }  
+    }
+}

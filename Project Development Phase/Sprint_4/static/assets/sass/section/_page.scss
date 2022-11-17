@@ -1,0 +1,92 @@
+.error__page {
+    background: $text-color-8;
+    height: 100vh;
+    position: relative;
+    &-content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        h1 {
+            font-size: 300px;
+            line-height: 310px;
+            color: $white;
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            line-height: 30px;
+        }
+    }
+}
+/*==========================================================================
+Pagination
+========================================================================== */
+.pagination {
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 15px;
+            &:last-child {
+                margin: 0;
+            }
+            .active {                    
+                background: $primary-color;
+                color: $white;
+                border-color: $primary-color;
+            }
+            a {
+                color: $text-color-3;
+                border: 1px solid $text-color-2;
+                display: block;
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+                border-radius: 50%;
+                text-align: center;
+                font-weight: 500;
+                transition: all 0.4s ease-in-out; 
+                &:hover {
+                    background: $primary-color;
+                    color: $white;
+                    border-color: $primary-color;
+                }
+            }
+        }
+    } 
+}
+@media (max-width: 1399px) {
+    .error__page {
+        &-content {
+            h1 {
+                font-size: 240px;
+                line-height: 250px;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .error__page {
+        &-content {
+            p {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .error__page {
+        &-content {
+            h1 {
+                font-size: 140px;
+                line-height: 150px;
+            }
+        }
+    }
+}

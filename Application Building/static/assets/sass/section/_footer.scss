@@ -1,0 +1,325 @@
+/*==========================================================================
+Footer
+========================================================================== */
+.footer__area {
+    background: $text-color-7;
+    &-widget {
+        &-about {
+            &-logo {
+                a {
+                    display: inline-block;
+                    img {
+                        max-width: 180px;
+                        position: relative;
+                        z-index: 99;                
+                    }
+                }
+            }
+            p {
+                margin-top: 30px;
+                color: $text-color-4;
+                max-width: 360px;
+            }
+            &-social {
+                margin-top: 35px;
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        margin: 5px;
+                        list-style: none;
+                        display: inline-block;
+                        &:last-child {
+                            margin: 0;
+                        }
+                        a {
+                            i {
+                                color: $text-color-3;
+                                transition: all 0.4s ease-out 0s;
+                                width: 50px;
+                                height: 50px;
+                                line-height: 50px;
+                                display: inline-block;
+                                border: 1px solid $border3;
+                                text-align: center;
+                                border-radius: 50%;
+                                &:hover {
+                                    background: $primary-color-1;
+                                    border-color: $primary-color-1;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.three {
+                    ul {
+                        li {
+                            a {
+                                i {
+                                    &:hover {
+                                        background: $primary-color;
+                                        border-color: $primary-color;
+                                    }
+                                }
+                            }
+                        }
+                    }                    
+                }
+            }
+            &-menu {
+                margin-top: 30px;
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        margin-right: 40px;
+                        list-style: none;
+                        display: inline-block;
+                        &:last-child {
+                            margin: 0;
+                        }
+                        a {
+                            color: $text-color-4;
+                            transition: all 0.4s ease-out 0s;
+                            font-family: $heading-font;
+                            font-size: 18px;
+                            line-height: 28px;
+                            &:hover {
+                                color: $primary-color-1;
+                            }
+                        }
+                    }
+                }
+                &.three {
+                    ul {
+                        li {
+                            a {
+                                color: $text-color-3;
+                                &:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-menu {
+            ul {
+                padding: 0;
+                margin: 0;
+                li {
+                    list-style: none;
+                    margin-bottom: 12px;
+                    a {
+                        position: relative;
+                        transition: all 0.4s ease-out 0s;
+                        color: $text-color-4;
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            background: $primary-color;
+                            width: 0;
+                            transition: all 0.4s ease-out 0s;
+                            opacity: 0;
+                            height: 2px;
+                            left: 0;
+                            top: 8px;
+                        }
+                        &:hover {
+                            padding-left: 25px;
+                            color: $primary-color;
+                            &::after {
+                                width: 15px;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+            &.one {
+                ul {
+                    li {
+                        a {
+                            &::after {
+                                background: $primary-color-1;
+                            }
+                            &:hover {
+                                color: $primary-color-1;
+                            }
+                        }
+                    }
+                }                
+            }
+        }
+        &-subscribe {
+            background: $text-color-1;
+            padding: 50px 60px;
+            padding-top: 70px;
+            h4 {
+                margin-bottom: 25px;
+            }
+            form {
+                position: relative;
+                input {
+                    background: transparent;
+                    border: 0;
+                    color: $text-color-4;
+                    padding-left: 0;
+                    border-bottom: 1px solid $text-color-2;
+                }
+                button {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    line-height: 60px;
+                    padding: 0;
+                    width: 60px;
+                    font-size: 20px;
+                }
+            }
+            &.one {
+                form {
+                    position: relative;
+                    input {
+                        &:focus {
+                            border-color: $primary-color-1;
+                        }
+                    }
+                    button {
+                        background: $primary-color-1;
+                    }
+                }                
+            }
+        }
+    }
+}
+/*==========================================================================
+Copyright
+==========================================================================*/
+.copyright__area {
+    background: $text-color-7;
+    &-border {
+        position: relative;
+        padding: 40px 0;
+        &::after {
+            position: absolute;
+            content: '';
+            background: $white;
+            width: 100%;
+            height: 1px;
+            left: 0;
+            top: 0;
+            opacity: 0.1;
+        }
+    }
+    &-left {
+        p {
+            color: $white;
+            a {
+                color: $primary-color;
+            }
+        }
+    }
+    &-right {
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                display: inline-block;
+                margin-right: 20px;
+                &:last-child {
+                    margin: 0;
+                }
+                a {
+                    i {
+                        color: $white;
+                        transition: all 0.3s ease-out 0s;
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
+/*==========================================================================
+Copyright One
+==========================================================================*/
+.copyright__area-one {
+    &-left {
+        text-align: center;
+        p {
+            a {
+                color: $primary-color-1;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .footer__area {
+        &-widget {
+            &-about {
+                margin-bottom: 40px;
+                &-menu {
+                    ul {
+                        li {
+                            margin: 5px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 440px) {
+    .footer__area {
+        &-widget {
+            &-subscribe {
+                padding: 45px 35px;
+                padding-top: 60px;
+            }
+        }
+    }
+}
+@media (max-width: 340px) {
+    .footer__area {
+        &-widget {
+            &-about {
+                &-menu {
+                    ul {
+                        li {
+                            margin-right: 22px;
+                            &:nth-child(3) {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .footer__area {
+        &-widget {
+            &-about {
+                &-logo {
+                    a {
+                        img {
+                            max-width: 175px;              
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+  
+
+

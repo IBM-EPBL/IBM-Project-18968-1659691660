@@ -1,0 +1,507 @@
+/*==========================================================================
+Common Css
+==========================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+body {
+	font-family: $body-font;
+	color: $body-color;
+	font-size: 16px;
+	line-height: 26px;
+  	font-weight: 400;
+	text-transform: capitalize;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	transition: all 0.4s ease-out 0s;
+}
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+a,
+button,
+i {
+	text-decoration: none;
+	color: inherit;
+}
+a:focus,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+.section-padding {
+	padding: 150px 0px;
+}
+@media (max-width: 575px) {
+	.section-padding {
+		padding: 90px 0px;
+	}
+}
+.display-none {
+	display: none;
+}
+.img__full {
+	width: 100%;
+}
+/*==========================================================================
+Form
+==========================================================================*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid $border3;
+  border-color: transparent;
+  border-radius: 0px;
+  background: $primary-color;
+  color: $white;
+  line-height: 1;
+  padding: 0.6em 1em 0.4em;
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: transparent;
+}
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+  border-color: transparent;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: $white;
+  border: 1px solid;
+  border-radius: 0px;
+  width: 100%;
+  height: 60px;
+  border: 1px solid $border3;
+  background: $white;
+  padding-left: 20px;  
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: $white;
+  outline: none;
+  box-shadow: none;
+  border-color: $primary-color
+}
+select {
+  border: 1px solid $text-color-2;
+}
+textarea {
+	width: 100%;
+	height: 150px;
+	padding-top: 15px;
+}
+button,
+button:hover,
+button:focus {
+	box-shadow: none;
+	border: none;
+	outline: none;
+}
+/*==========================================================================
+Hedging CSS
+==========================================================================*/
+$list: (h1, 84px, 94px, 0, 0, $white, $heading-font, 700),
+(h2, 48px, 58px, 0, 0, $white, $heading-font, 700),
+(h3, 30px, 40px, 0, 0, $white, $heading-font, 700),
+(h4, 24px, 34px, 0, 0, $white, $heading-font, 700),
+(h5, 20px, 30px, 0, 0, $white, $heading-font, 700),
+(h6, 18px, 28px, 0, 0, $white, $heading-font, 700),
+(p, 16px, 26px, 0, 0, $text-color-4, $body-font);
+@each $name, $size, $height, $p, $m, $color, $font, $weight in $list {
+    #{$name}{
+      font-size: $size;
+      line-height: $height;
+      padding: $p;
+      margin: $m;
+      color: $color;
+      font-family: $font;
+      font-weight: $weight;
+    }
+}
+$list: left, center, right;
+@each $i in $list {
+    .t-#{$i} {
+        text-align: $i;
+    }
+}
+@media (max-width: 767px) {
+	h2 {
+		font-size: 46px;
+		line-height: 56px;
+	}
+}
+@media (max-width: 530px) {
+	h2 {
+		font-size: 40px;
+		line-height: 50px;
+	}
+}
+@media (max-width: 460px) {
+	h2 {
+		font-size: 38px;
+		line-height: 48px;
+	}
+}
+@media (max-width: 430px) {
+	h2 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	h3 {
+		font-size: 26px;
+		line-height: 36px;
+	}
+	h4 {
+		font-size: 24px;
+		line-height: 34px;
+	}
+}
+/*==========================================================================
+Theme Btn CSS
+==========================================================================*/
+.theme-btn,
+.theme-btn-1 {
+	background: $primary-color;
+	color: $white;
+	display: inline-flex;
+	font-size: 16px;
+	padding: 0 35px;
+	text-align: center;
+	font-weight: 700;
+	font-family: $body-font;
+	z-index: 3;
+	position: relative;
+	transition: all 0.5s ease-out 0s;
+	align-items: center;
+	line-height: 60px;
+	overflow: hidden;
+    &::after {
+        position: absolute;
+        content: '';
+        position: absolute;
+        width: 0;
+		transition: all 0.5s ease-out 0s;
+        height: 100%;
+        top: 0;
+        left: 0;
+		right: 0;
+		margin: 0 auto;
+        z-index: -1;
+    }
+	i::before {
+		font-size: 22px;
+		margin-left: 10px;
+		top: 1px;
+		position: relative;
+	}
+    &:hover {
+        color: $white;
+        &::after {
+			width: 100%;
+        }
+    }
+	&:focus {
+		color: $white;
+	}
+}
+.theme-btn  {
+	background: $primary-color-1;
+	&:hover {
+		color: $text-color-1
+	}
+	&::after {
+		background: $white;
+	}
+}
+.theme-btn-1  {
+	background: $primary-color;
+	&:hover {
+		color: $text-color-1
+	}
+	&::after {
+		background: $white;
+	}
+}
+.simple-btn {
+	display: inline-block;
+	color: $white;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 600;
+	transition: all 0.4s ease-in-out;
+	text-transform: capitalize;
+	i {
+		position: relative;		
+		top: 1px;
+		margin-left: 8px;
+	}
+	&:hover {
+		color: $primary-color;
+	}
+}
+.subtitle {
+	display: inline-block;
+	position: relative;
+	font-weight: 500;
+	color: $primary-color;
+	text-transform: capitalize;
+	z-index: 1;
+	margin-bottom: 6px;
+	padding-left: 70px;
+	font-family: $heading-font;
+	&::after {
+		position: absolute;
+		top: 13px;
+		content: '';
+		left: 0;
+		width: 50px;
+		height: 1px;
+		background: $primary-color;
+	}
+	&.one {
+		color: $primary-color-1;
+		&::after {
+			background: $primary-color-1
+		}		
+	}
+}
+.subtitle-one {
+	display: inline-block;
+	font-family: $heading-font;
+	position: relative;
+	font-weight: 600;
+	color: $primary-color;
+	text-transform: capitalize;
+	z-index: 1;
+	margin-bottom: 6px;
+}
+@keyframes rotate {
+	100% {
+		transform: rotate(90deg);
+	}
+}
+/*==========================================================================
+Scroll Top CSS
+==========================================================================*/
+.scroll-up {
+	cursor: pointer;
+	display: block;
+	border-radius: 50px;
+	box-shadow: inset  0 0 0 2px $text-color-2;
+	z-index: 10000;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(15px);
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	height: 50px;
+	width: 50px;
+    transition: all 200ms linear;
+	&::after {
+		position: absolute;
+		font-family: 'Font Awesome 5 Pro';
+		content: "\f176";
+		text-align: center;
+		line-height: 50px;
+		font-size: 24px;
+		color: $primary-color;
+		left: 0;
+		top: 0;
+		font-size: 20px;
+		height: 50px;
+		width: 50px;
+		cursor: pointer;
+		display: block;
+		z-index: 1;
+		transition: all 200ms linear;
+	}
+	&.active-scroll {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+	svg path { 
+		fill: none; 
+	}
+	svg.scroll-circle path {
+		stroke: $primary-color;
+		stroke-width: 4;
+		box-sizing:border-box;
+		transition: all 200ms linear;
+	}
+}
+.scroll-one {
+	box-shadow: inset  0 0 0 2px $text-color-8;
+	&::after {
+		color: $primary-color-1;
+	}
+	svg.scroll-circle path {
+		stroke: $primary-color-1;
+	}
+}
+/*==========================================================================
+Preloader CSS
+========================================================================== */
+.spinner {
+	width: 80px;
+	height: 80px;
+	position: relative;
+	margin: 100px auto;
+}
+.double-bounce1,
+.double-bounce2 {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: $white;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce2 {
+	animation-delay: -1.0s;
+}
+@keyframes sk-bounce {
+	0%, 100% {
+		transform: scale(0.0);
+		-webkit-transform: scale(0.0);
+	}
+	50% {
+		transform: scale(1.0);
+		-webkit-transform: scale(1.0);
+	}
+}
+.theme-loader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: $text-color-1;
+	z-index: 9999999999;
+}
+.theme-loader .spinner {
+	left: 50%;
+	top: 50%;
+	margin-left: -40px;
+	margin-top: -40px;
+}
+/*==========================================================================
+Video Animation CSS
+==========================================================================*/
+.video-pulse::after, .video-pulse::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	border: 1px solid $white;
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	animation-duration: 2.5s;
+	animation-timing-function: linear;
+	animation-name: video-animation;
+	animation-iteration-count: infinite;
+}
+.video-pulse::before {
+	animation-delay: 1s;
+}
+@keyframes video-animation {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+/*==========================================================================
+Custom Cursor
+========================================================================== */
+.custom__cursor-one {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px solid $primary-color;
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 5px), -50%);
+    z-index: 999999;
+	&.main {
+		border-color: $primary-color-1;
+	}
+}
+.custom__cursor-two {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: $primary-color;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+    z-index: 999999;            
+	&.main {
+		background: $primary-color-1;
+	}
+}
+.custom__cursor__hover {
+    background: $primary-color;
+    opacity: 0.2;
+    width: 70px;
+    height: 70px;
+	&.main {
+		background: $primary-color-1;
+		opacity: 0.4;
+	}
+}

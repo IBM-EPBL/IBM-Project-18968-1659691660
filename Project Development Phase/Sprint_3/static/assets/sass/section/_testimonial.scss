@@ -1,0 +1,185 @@
+/*==========================================================================
+Reviews
+==========================================================================*/
+.reviews__area {
+    background: $text-color-8;
+    position: relative;
+    padding-bottom: 210px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &-left {
+        background: $text-color-1;
+        padding: 60px;
+        margin-right: 60px;
+        position: relative;
+        margin-top: -160px;
+        &-item {
+            p {
+                max-width: 420px;
+                margin-top: 30px;
+                padding-top: 30px;
+                border-top: 1px solid $text-color-8;
+            }
+            &-client {
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                &-avatar {
+                    margin-right: 20px;
+                    img {
+                        border-radius: 50%;
+                        max-width: 70px;
+                    }
+                }
+                &-content {
+                    h5 {
+                        margin-bottom: 5px;
+                    }
+                    span {
+                        color: $text-color-4;
+                    }
+                }
+            }
+        }
+        &-dots {
+            margin-top: 40px;
+            .reviews-pagination {
+                .swiper-pagination-bullet {
+                    border-radius: 50%;
+                    background: $primary-color;
+                    width: 8px;
+                    height: 8px;
+                    transition: all 0.4s ease-out 0s;
+                    opacity: 1;
+                    margin: 0;
+                    margin-right: 20px;
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 24px;
+                        height: 24px;
+                        border: 1px solid $primary-color;
+                        top: 50%;
+                        border-radius: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                    }
+                    &-active {
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        &-quote {
+            position: absolute;
+            right: 120px;
+            bottom: 120px;
+        }
+    }
+}
+/*==========================================================================
+Feedback
+==========================================================================*/
+.feedback__area {
+    background: $text-color-8;
+    &-title {
+        max-width: 620px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    &-item {
+        background: $text-color-7;
+        padding: 40px;
+        position: relative;
+        &-quote {
+            position: absolute;
+            bottom: 40px;
+            right: 35px;
+            max-width: 65px;
+        }
+        &-reviews {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            ul {
+                padding: 0;
+                margin: 0;
+                margin-left: 20px;
+                li {
+                    display: inline-block;
+                    a {
+                        i {
+                            color: $primary-color;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        &-bottom {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            &-avatar {
+                margin-right: 20px;
+                img {
+                    border-radius: 50%;
+                    max-width: 60px;
+                }
+            }
+            &-content {
+                span {
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: $text-color-4;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .reviews__area {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        &-left {
+            margin: 0;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .reviews__area {
+        &-left {
+            padding: 50px 40px;
+            &-quote {
+                right: 40px;
+                bottom: 50px;
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .reviews__area {
+        &-left {
+            padding: 50px 30px;
+            &-item {
+                &-client {
+                    &-avatar {
+                        img {
+                            max-width: 65px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .feedback__area {
+        &-item {
+            padding: 40px 30px;
+        }
+    }
+}

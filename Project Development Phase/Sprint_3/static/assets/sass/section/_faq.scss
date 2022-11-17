@@ -1,0 +1,39 @@
+/*==========================================================================
+Faq CSS
+==========================================================================*/
+.faq {
+    &-item {
+        border-bottom: 1px solid $border2;
+        &-card {
+            &-header {  
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: none;
+                cursor: pointer;
+                padding: 20px 0;  
+                i {
+                    color: $white;
+                    font-size: 35px;
+                }
+                &-content {
+                    padding: 0px 0 40px 0;
+                }          
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .faq {
+        &-item {
+            &-card {
+                &-header {    
+                    h5 {
+                        font-size: 16px;
+                        line-height: 26px;
+                    }         
+                }
+            }
+        }
+    }
+}
