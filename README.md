@@ -84,23 +84,29 @@ When venturing into the woods, field naturalists usually rely on common approach
 * The identification database can be updated easily
 
 ## Functional Requirement
+
 The main need for functional requirement is to have functionalities for the input and output classification. The major functional requirement for our project are:
 
 * **Administrative functions**
+
 The main need for administrative functions is to divide the CRUD operations based on the users using the application. This helps to differentiate who has which CRUD operation available to use for them and also defines the ability to access database for different users.
 
 * **Authentication**
+
 Authentication is used by a server when the server needs to know exactly who is accessing their information or site. Authentication is used by a client when the client needs to know that the server is system it claims to be. This helps us to monitor who uses the application and helps us to maintain the security and authenticity of the application that the user is using. This also helps the users to manage all the species that they have scanned.
 
 * **Authorization levels**
+
 The owner has full access rights to the access the user data and can grant other people the right to access it. You say that the owner authorizes people to access it. This simple example allows us to introduce a few concepts in the authorization context. A permission becomes a privilege (or right) when it is assigned to someone. So, if you assign permission to access to edit the database, you are granting them that privilege.
 
 * **Audit Tracking**
+
 Audit Tracking helps to track who has scanned what, saved which image and track the users activity in the application and save the details in the cloud as a log for that particular user. It is just simply to track malicious activity and ensure the safety of the users. 
 
 ## Non Functional Requirement
 
 * **Input Device**
+
 The Input device required for the app to run is a smartphone or a tab with minimum 4GB RAM, 64bit octa core processor with a minimum of 8mp back camera. The device should also have a stable internet connection facility that can support upto 4G Internet Connectivity.
 
 ## Advantages and Disadvantages
