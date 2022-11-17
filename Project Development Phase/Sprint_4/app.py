@@ -12,12 +12,13 @@ from werkzeug.utils import secure_filename
 global graph
 graph=tf.compat.v1.get_default_graph()
 #this list is used to log the predictions in the server console
-predictions = ["Corpse Flower", 
-               "Great Indian Bustard", 
-               "Lady's slipper orchid", 
-               "Pangolin", 
+predictions = [
+               "Seneca White Deer",
                "Spoon Billed Sandpiper", 
-               "Seneca White Deer"
+               "Pangolin", 
+               "Lady's slipper orchid", 
+               "Great Indian Bustard", 
+               "Corpse Flower", 
               ]
 #this list contains the link to the predicted species              
 found = [
@@ -32,26 +33,19 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    # Home Page
     return render_template("index.html")
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
     if request.method == 'GET':
         return ("<h6 style=\"font-face:\"Courier New\";\">No GET request herd.....</h6 >")
     if request.method == 'POST':
-        # Fetching the uploaded image from the post request using the id 'uploadedimg'
-        f = request.files['uploadedimg']
+        upload_img_file = request.files['uploadedimg']
         basepath = os.path.dirname(__file__)
-        #Securing the file by creating a path in local storage
         file_path = os.path.join(basepath, 'uploads', secure_filename(f.filename))
-        #Saving the uploaded image locally
-        f.save(file_path)
-        #loading the locally saved image 
+        upload_img_file.save(file_path)
         img = tf.keras.utils.load_img(file_path, target_size=(224, 224))
-        #converting the loaded image to image array 
         x = tf.keras.utils.img_to_array(img)
         x = preprocess_input(x)
-        # Converting the preprecessed image to numpy array
         inp = np.array([x])
         with graph.as_default():
             #loading the saved model from training
@@ -59,11 +53,8 @@ def upload():
             loaded_model_json = json_file.read()
             json_file.close()
             loaded_model = model_from_json(loaded_model_json)
-            #adding weights to the trained model
             loaded_model.load_weights("../Sprint_2/DigitalNaturalist.h5")
-            #predecting the image
             preds =  np.argmax(loaded_model.predict(inp),axis=1)
-            #logs are printed to the console 
             print("Predicted the Species " + str(predictions[preds[0]]))
         text = found[preds[0]]
         return redirect(text)
@@ -71,7 +62,5 @@ def upload():
 
 
 if __name__ == '__main__':
-    #Threads enabled so multiple users can request simultaneously
-    #debug is turned off, turn on during development to debug the errors
     #application is binded to port 8000
     app.run(threaded = True,debug=True,port="8000")
