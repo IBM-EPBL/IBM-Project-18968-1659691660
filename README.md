@@ -1,10 +1,10 @@
 # IBM-Project-18968-1659691660
 ## *Digital Naturalist - AI Enabled tool for Biodiversity Researchers*
 
-##Demo:
-```md
+## Demo:
+
 [![Watch the video](https://img.youtube.com/vi/2h0_EjLAMC4/default.jpg)](https://youtu.be/2h0_EjLAMC4)
-```
+
 
 ## Project Overview
 In this project, we are creating a web application which uses a deep learning model, trained on different species of birds, flowers and mammals (2 subclasses in each for a quick understanding) and get the prediction of the bird when an image is been given.
