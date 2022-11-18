@@ -44,7 +44,8 @@ Methodology: Convolutional Neural Network (CNN),Matrix Multiple CNN (MMCNN)
 When venturing into the woods, field naturalists usually rely on common approaches like always carrying a guidebook around everywhere or seeking help from experienced ornithologists. There should be a handy tool for them to capture, identify and share the beauty to the outside world. Field naturalists can only use this web app from anywhere to identify the birds, flowers, mammals and other species they see on their hikes, canoe trips and other excursions. In this project, we are creating a web application which uses a deep learning model, trained on different species of birds, flowers and mammals (2 subclasses in each for a quick understanding)and get the prediction of the bird when an image is been given.
 
 ## Empathy map
-![Copy of Data Flow Diagram](https://user-images.githubusercontent.com/113159119/202651731-76477a96-4962-4af6-86a9-cfb14c50c521.jpg)
+![1668591435928](https://user-images.githubusercontent.com/113159119/202652617-16328553-135d-4fe8-af9b-79a766950f31.png)
+
 
 ## Ideation and brainstorming
  We have brainstormed with our group for this project and contracted to three top ideas those are:
@@ -89,6 +90,10 @@ When venturing into the woods, field naturalists usually rely on common approach
 
 * The identification database can be updated easily
 
+## Problem Solution Fit
+![1668606342928](https://user-images.githubusercontent.com/113159119/202652923-aab04a1c-c614-4291-b933-a0bf25e33146.png)
+
+
 ## Functional Requirement
 
 The main need for functional requirement is to have functionalities for the input and output classification. The major functional requirement for our project are:
@@ -111,9 +116,67 @@ Audit Tracking helps to track who has scanned what, saved which image and track 
 
 ## Non Functional Requirement
 
-* **Input Device**
+* **Performance**
+The performance of the input device plays the major role in performance of the overall app. The device should have a multicore processor and enough RAM to perform image processing and multiprocessing activities.
 
-The Input device required for the app to run is a smartphone or a tab with minimum 4GB RAM, 64bit octa core processor with a minimum of 8mp back camera. The device should also have a stable internet connection facility that can support upto 4G Internet Connectivity.
+* **Compatibility**
+Various devices may be used to access the app and if this situation arises, the app should have the required features and enhancements to handle the device variations.
+
+* **Scalability**
+The large trained and tested dataset requires scalable platform like IBM Watson for classification and detection purposes. The devices are connected with the cloud which provides scalability, meaning that the hardware requirements will vary based on the input trafic. Use of IBM Watson instructs the use of scalability.
+
+* **Reliability**
+The app is used by field scientists who's research will be based on the output provided by the app. Hence reliability of information has to be maintained. The web source from which the information is retrieved should be reliable.
+
+* **Maintainability**
+Maintability of the cloud performance, resource and the source code plays a vital role in the accuracy of the app. The existing code of the app has to be maintained and if a better version or upgraded version is available, the code has to be updated inorder to increase accuracy.
+
+
+* **Availability**
+Since cloud is used as the core for the app, the cloud computation service has to be available all the time irrespective of the traffic it faces and load it recieves.
+
+## Project Design
+**Data Flow Diagram**
+
+![Copy of Data Flow Diagram](https://user-images.githubusercontent.com/113159119/202654293-e83bcd03-2e91-47a6-9d1b-0381c5d3dd2a.jpg)
+
+**Solution & Technical Architecture**
+
+![1668615518389](https://user-images.githubusercontent.com/113159119/202654758-5c1765e6-7172-4e93-b81c-4176ed348166.png)
+
+
+![1668615486837](https://user-images.githubusercontent.com/113159119/202654779-c831cb33-2351-4fd1-8b91-1c2ccdd27d4a.png)
+
+**User Stories**
+
+![1668615994745](https://user-images.githubusercontent.com/113159119/202654878-26814575-ab85-43e3-b549-917229718e84.png)
+
+**Sprint Planning & Estimation**
+
+![Screenshot (151)](https://user-images.githubusercontent.com/113159119/202655494-1fc4d199-5579-4c5d-af70-5d04cef752f5.png)
+
+## Reports From JIRA
+
+**Burn-Out Chart**
+
+![1668665032324](https://user-images.githubusercontent.com/113159119/202655829-f63d2c25-cc7c-4974-9f75-99e75e8a216c.png)
+
+**Roadmap**
+
+![1668665113847](https://user-images.githubusercontent.com/113159119/202655870-0da834ee-cffd-47d4-9e50-b1a0f29948a5.png)
+
+
+**Sprint Delivery Schedule**
+
+![1668664696127](https://user-images.githubusercontent.com/113159119/202655132-8d30a241-9a94-479d-ab87-51abf2cdc633.png)
+
+## Results
+
+![1668756862251](https://user-images.githubusercontent.com/113159119/202656661-e5817ebb-79ef-4f14-9203-0b7fe357070d.png)
+
+
+![1668757010772](https://user-images.githubusercontent.com/113159119/202656824-9910ef40-67ce-44d1-b89b-836b1ebe0df0.png)
+
 
 ## Advantages and Disadvantages
 * Our projects helps many researchers and students to understand more about flora and fauna 
