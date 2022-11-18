@@ -1,9 +1,7 @@
 # IBM-Project-18968-1659691660
 ## *Digital Naturalist - AI Enabled tool for Biodiversity Researchers*
 
-## Demo:
-
-[![Watch the video](https://img.youtube.com/vi/2h0_EjLAMC4/default.jpg)](https://youtu.be/2h0_EjLAMC4)
+[![Watch the video](https://img.youtube.com/vi/2h0_EjLAMC4/maxresdefault.jpg)](https://youtu.be/2h0_EjLAMC4)
 
 
 ## Project Overview
