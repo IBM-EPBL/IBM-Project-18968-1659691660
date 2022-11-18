@@ -43,6 +43,9 @@ Methodology: Convolutional Neural Network (CNN),Matrix Multiple CNN (MMCNN)
 ## Problem Statement Definition
 When venturing into the woods, field naturalists usually rely on common approaches like always carrying a guidebook around everywhere or seeking help from experienced ornithologists. There should be a handy tool for them to capture, identify and share the beauty to the outside world. Field naturalists can only use this web app from anywhere to identify the birds, flowers, mammals and other species they see on their hikes, canoe trips and other excursions. In this project, we are creating a web application which uses a deep learning model, trained on different species of birds, flowers and mammals (2 subclasses in each for a quick understanding)and get the prediction of the bird when an image is been given.
 
+## Empathy map
+![Copy of Data Flow Diagram](https://user-images.githubusercontent.com/113159119/202651731-76477a96-4962-4af6-86a9-cfb14c50c521.jpg)
+
 ## Ideation and brainstorming
  We have brainstormed with our group for this project and contracted to three top ideas those are:
 
@@ -125,6 +128,7 @@ The Input device required for the app to run is a smartphone or a tab with minim
 
 ##  Conclusion
 The app, made with flask and django uses convolutional neural network (CNN) is trained with predefined dataset and the output is displayed and the app is deployed in IBM Cloud. When the field scientist takes a picture of a flora or fauna using their input device, that image is processed against the trained model and the species are identified. The solution is platform independent, meaning that it can be accessed with any device that satisfies the minimum hardware requirement and can be accessed anywhere with just an input device and internet connection. The modularity of the app enables the developer to include additional features in the future such as fossil detection, route analysis and many more.
+
 
 ## Future Scope
 
