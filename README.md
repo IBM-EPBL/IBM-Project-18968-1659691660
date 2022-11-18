@@ -1,6 +1,11 @@
 # IBM-Project-18968-1659691660
 ## *Digital Naturalist - AI Enabled tool for Biodiversity Researchers*
 
+##Demo:
+```md
+[![Watch the video](https://img.youtube.com/vi/2h0_EjLAMC4/default.jpg)](https://youtu.be/2h0_EjLAMC4)
+```
+
 ## Project Overview
 In this project, we are creating a web application which uses a deep learning model, trained on different species of birds, flowers and mammals (2 subclasses in each for a quick understanding) and get the prediction of the bird when an image is been given.
 The existing solution is quite simple and suits certain constraints whereas we need to find alternatives to retrieve a more comprehensive range of information. The identification algorithm is fit in a mobile app which makes it platform independent. The web version of the mobile app is linked with the database portal with which a researcher can access the data. This app is architected to withstand high volumes of traffic. The capability of the app to find various flora and fauna is improvised. The identification database can be updated easily.
